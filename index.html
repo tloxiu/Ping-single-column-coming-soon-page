@@ -12,35 +12,45 @@
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
 <body>
+
+  <header>
+    <a href="#" aria-label="Ping site - Home"><img class="logo" src="assets/logo.svg" alt=""></a>
+  </header>
+
   <main class="wrapper">
-    <header>
-      <a href="#"><img class="logo" src="assets/logo.svg" alt="Logo image"></a>
-    </header>
     <section class="launch-section">
       <h1 class="title">We are launching <span class="weight-accent">soon!</span></h1>
       <p class="description">Subscribe and get notified</p>
       <form action="#">
+        <label for="email" class="sr-only">Your email address:</label>
         <input class="email-input" type="email" placeholder="Your email address...">
         <div class="error-container"><p class="error hidden">Please provide a valid email address</p></div>
         <button class="notify-btn" type="submit">Notify Me</button>
       </form>
     </section>
     <img class="dashboard-img" src="assets/illustration-dashboard.png" alt="">
-    <footer>
-      <div class="social-medias">
-        <div class="social">
-          <a class="icons" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-        <div class="social">
-          <a class="icons" href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        </div>
-        <div class="social">
-          <a class="icons" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-      <p class="copyright-description">&copy; Copyright Ping. All rights reserved.</p>
-    </footer>
   </main>
+
+  <footer>
+    <nav aria-label="Social Media Links">
+      <ul class="social-medias-nav">
+        <li class="social">
+          <a class="icons" href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li class="social">
+          <a class="icons" href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="social">
+          <a class="icons" href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <p class="copyright-description">&copy; Copyright Ping. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
