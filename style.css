@@ -58,13 +58,13 @@ textarea:not([rows]) {
 
 :root{
     /* Primary */
-    --Blue: hsl(223, 87%, 63%);
+    --clr-blue: hsl(223, 87%, 63%);
     /* Secondary */
-    --Pale-Blue: hsl(223, 100%, 88%);
-    --Light-Red: hsl(354, 100%, 66%);
+    --clr-pale-blue: hsl(223, 100%, 88%);
+    --clr-light-red: hsl(354, 100%, 66%);
     /* Neutral */
-    --Gray: hsl(0, 0%, 59%);
-    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    --clr-gray: hsl(0, 0%, 59%);
+    --clr-very-dark-blue: hsl(209, 33%, 12%);
 }
 
 .hidden{
@@ -73,15 +73,15 @@ textarea:not([rows]) {
 
 body{
     font-family: "Libre Franklin";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
 .wrapper{
     padding: 1rem 1.7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 header{
@@ -100,7 +100,7 @@ header{
 .title{
     font-weight: 300;
     margin-bottom: 1.2rem;
-    color: var(--Gray);
+    color: var(--clr-gray);
 }
 
 .weight-accent{
@@ -118,17 +118,29 @@ form{
     margin-bottom: 5rem;
 }
 
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 input{
     width: 100%;
-    padding: 0.8rem 5.5rem 0.8rem 2rem;
+    max-width: 21.875rem;
+    padding: 1rem;
     border-radius: 50px;
     outline: none;
-    border: 0.5px solid var(--Pale-Blue);
+    border: 0.5px solid var(--clr-pale-blue);
     margin-bottom: 0.8rem;
 }
 
 input::placeholder{
-    color: var(--Pale-Blue);
+    color: var(--clr-pale-blue);
 }
 
 .error-container{
@@ -137,15 +149,16 @@ input::placeholder{
 
 .error{
     font-size: 0.8rem;
-    color: var(--Light-Red);
+    color: var(--clr-light-red);
 }
 
 .notify-btn{
+    padding: 1rem;
+    flex: 1;
     border: none;
     outline: none;
-    background-color: var(--Blue);
+    background-color: var(--clr-blue);
     color: white;
-    padding: 0.9rem 5.5rem;
     border-radius: 50px;
     transition: .3s;
     cursor: pointer;
@@ -155,7 +168,7 @@ input::placeholder{
 }
 
 .notify-btn-move{
-    transform:  translate(0px, 25px);
+    transform:  translate(0px, 30px);
 }
 
 .notify-btn:hover{
@@ -164,19 +177,21 @@ input::placeholder{
 
 footer{
     margin-top: 7rem;
+    padding-bottom: 2rem;
 }
 
-.social-medias{
+.social-medias-nav{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 1.8rem;
+    list-style-type: none;
 }
 
 .social{
     cursor: pointer;
-    border: 1px solid var(--Pale-Blue);
+    border: 1px solid var(--clr-pale-blue);
     width: 35px;
     height: 35px;
     border-radius: 50px;
@@ -185,7 +200,7 @@ footer{
 }
 
 .social:hover{
-    background-color: var(--Blue);
+    background-color: var(--clr-blue);
     .icons{
         color: white;
     }
@@ -196,11 +211,11 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--Blue);
+    color: var(--clr-blue);
 }
 
 .copyright-description{
-    color: var(--Gray);
+    color: var(--clr-gray);
     font-size: 0.8rem;
 }
 
@@ -236,8 +251,8 @@ footer{
 
     .error{
         position: absolute;
-        top: 3.5rem;
-        left: 1.5rem;
+        top: 4rem;
+        left: 2rem;
     }
 
     .notify-btn{
@@ -249,3 +264,4 @@ footer{
         max-width: 580px;
     }
 }
+
