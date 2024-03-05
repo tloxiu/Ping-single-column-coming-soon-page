@@ -95,7 +95,6 @@ header{
 
 .logo{
     width: 65px;
-    margin: 0 auto;
 }
 
 .title{
@@ -131,6 +130,7 @@ form{
 }
 
 input{
+    align-self: center;
     width: 100%;
     max-width: 21.875rem;
     padding: 1rem;
@@ -154,7 +154,9 @@ input::placeholder{
 }
 
 .notify-btn{
-    padding: 1rem;
+    align-self: center;
+    max-width: 21.875rem;
+    padding: 1rem 7rem;
     flex: 1;
     border: none;
     outline: none;
@@ -257,7 +259,7 @@ footer{
     }
 
     .notify-btn{
-        padding: 0.4rem 4rem;
+        padding: 0.9rem 4rem;
         font-size: 0.9rem;
     }
     
@@ -265,4 +267,3 @@ footer{
         max-width: 580px;
     }
 }
-
